@@ -14,6 +14,19 @@
 // }
 function s() {
   const ar = [...arguments];
+  console.log(ar);
   return ar.reduce((a, c) => a + c);
 }
-console.log(s(1, 2, 3, 4));
+// console.log(s(1, 2, 3));
+function sr(...params) {
+  console.log(params);
+  return params.reduce((a, c) => a * c);
+}
+console.log(sr(1, 2, 3, 4));
+function nameFl(f, l, ...params) {
+  // console.log(`${f} ${l} ${params}`);
+}
+// nameFl("r", "i", "a", "b", "c");
+const m = (...params) => params.reduce((a, c) => a * c);
+
+console.log(m(1, 2, 3, 4));
